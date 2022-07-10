@@ -35,3 +35,10 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      
+      # Uploads artifact
+      - name: Upload Artifact
+      - uses: actions/upload-artifact@v3
+        with:
+          name: my-exe
+          path: build/*.exe
