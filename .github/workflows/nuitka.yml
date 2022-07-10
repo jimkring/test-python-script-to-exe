@@ -29,7 +29,7 @@ jobs:
           architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
 
       # Build python script into a stand-alone exe
-      - uses: jimkring/nuitka-build-executable-from-python-script@main
+      - uses: jimkring/python-script-to-executable@main
         with:
           script-name: test.py
       
