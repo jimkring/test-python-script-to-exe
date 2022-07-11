@@ -1,0 +1,3 @@
+# requirements.txt
+
+pydantic==1.9.1
