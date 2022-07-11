@@ -1,6 +1,6 @@
 # This is a workflow for testing various Nuitka command-line options
 
-name: Nuitka-Options
+name: Build-All-Platforms
 
 # Controls when the workflow will run
 on:
