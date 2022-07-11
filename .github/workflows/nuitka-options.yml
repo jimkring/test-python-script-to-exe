@@ -31,6 +31,7 @@ jobs:
         with:
           script-name: test.py
           onefile: false
+          access-token: ${{ secrets.NUITKA_COMMERCIAL_ACCESS_TOKEN }}
       
       # Uploads artifact
       - name: Upload Artifact
