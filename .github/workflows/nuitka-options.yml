@@ -51,7 +51,7 @@ jobs:
         uses: ASzc/change-string-case-action@v2
         with:
           string: ${{ runner.os }}
-      - name: "Upload Artifacts ${{ runner.os }}"
+      - name: "Upload Artifacts"
         uses: actions/upload-artifact@v3
         with:
           name: "${{ steps.os-name-lowercase.outputs.lowercase }}"
