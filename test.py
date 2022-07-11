@@ -5,6 +5,6 @@ class Message(BaseModel):
 
 message_json = {'value': 'hello word!'}
 
-message = Message(message_json)
+message = Message(**message_json)
 
 print(f'pydantic says, "message.value"')
