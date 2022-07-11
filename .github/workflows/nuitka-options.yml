@@ -40,7 +40,7 @@ jobs:
           pip install -r requirements.txt
 
       # Build python script into a stand-alone exe
-      - uses: jimkring/python-script-to-exe@nuitka-options-action-inputs
+      - uses: jimkring/python-script-to-exe@0.2.0
         with:
           script-name: test.py
           onefile: true
