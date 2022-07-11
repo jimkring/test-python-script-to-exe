@@ -28,6 +28,8 @@ jobs:
           cache: 'pip'
           cache-dependency-path: |
             **/requirements*.txt
+          run: |
+            pip install requirements.txt
 
       # Build python script into a stand-alone exe
       - uses: jimkring/python-script-to-exe@nuitka-options-action-inputs
