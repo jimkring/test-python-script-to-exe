@@ -14,8 +14,13 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
-
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+      
+    runs-on: ${{ matrix.os }}
+    
     steps:
       # Check-out repository
       - uses: actions/checkout@v3
@@ -29,7 +34,7 @@ jobs:
           cache-dependency-path: |
             **/requirements*.txt
           run: |
-            pip install requirements.txt
+            pip install -r requirements.txt
 
       # Build python script into a stand-alone exe
       - uses: jimkring/python-script-to-exe@nuitka-options-action-inputs
