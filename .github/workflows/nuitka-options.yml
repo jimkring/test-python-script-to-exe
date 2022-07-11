@@ -47,8 +47,12 @@ jobs:
           access-token: ${{ secrets.NUITKA_COMMERCIAL_ACCESS_TOKEN }}
           
       # Uploads artifacts
+      - id: os-name
+        uses: ASzc/change-string-case-action@v1
+        with:
+          string: ${{ runner.os }}
       - name: "Upload Artifacts ${{ runner.os }}"
         uses: actions/upload-artifact@v3
         with:
-          name: "${{ lowercase(runner.os) }}"
+          name: "${{ steps.os-name-lowercase.outputs.lowercase }}"
           path: build/**/*
