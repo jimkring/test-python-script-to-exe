@@ -45,10 +45,10 @@ jobs:
           script-name: test.py
           onefile: true
           access-token: ${{ secrets.NUITKA_COMMERCIAL_ACCESS_TOKEN }}
-      
-      # Uploads artifact
-      - name: Upload Artifact
+          
+      # Uploads artifacts
+      - name: "Upload Artifacts ${{ runner.os }}"
         uses: actions/upload-artifact@v3
         with:
-          name: build-output
-          path: build/*.exe
+          name: "${{ lowercase(runner.os) }}"
+          path: build/**/*
