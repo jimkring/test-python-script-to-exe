@@ -48,7 +48,7 @@ jobs:
           
       # Uploads artifacts
       - id: os-name
-        uses: ASzc/change-string-case-action@v1
+        uses: ASzc/change-string-case-action@v2
         with:
           string: ${{ runner.os }}
       - name: "Upload Artifacts ${{ runner.os }}"
